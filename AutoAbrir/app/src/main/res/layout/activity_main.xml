@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/azulnaranja"
-    android:stretchColumns="*"
     tools:context="com.example.dell.autoabrir.MainActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="*">
 
     <TableRow
         android:layout_width="match_parent"
@@ -85,6 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:background="#63ffffff"
             android:inputType="numberPassword" />
     </TableRow>
 
@@ -103,7 +109,5 @@
             android:onClick="crear"
             android:textColor="@android:color/background_light" />
     </TableRow>
-
-
-
-</TableLayout>
+    </TableLayout>
+</android.support.v4.widget.NestedScrollView>
