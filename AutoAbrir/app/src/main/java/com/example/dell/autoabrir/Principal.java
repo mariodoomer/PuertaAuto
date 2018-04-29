@@ -28,7 +28,7 @@ public class Principal extends AppCompatActivity {
     RadioButton MLibre,MSeguro;
     Button salir, iniciar;
     EditText contraseña;
-    Boolean puerta;
+    Boolean puerta=false;
     int id = 0;
     String clave, mode, contra;
 
