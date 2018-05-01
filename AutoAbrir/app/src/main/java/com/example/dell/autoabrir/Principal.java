@@ -131,6 +131,8 @@ public class Principal extends AppCompatActivity {
         iniciar = (Button) dialogo.findViewById(R.id.btniniciar);
         contraseña = (EditText) dialogo.findViewById(R.id.etcontralogin);
         iniciar.setOnClickListener(new AcepListener());
+        dialogo.setCancelable(false);
+        dialogo.setCanceledOnTouchOutside(false);
         return dialogo;
     }
     class AcepListener implements View.OnClickListener {
@@ -144,5 +146,10 @@ public class Principal extends AppCompatActivity {
                 Toast.makeText(Principal.this, "Contraseña incorrecta", Toast.LENGTH_SHORT).show();
             }
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        //evita regresar a la pantalla anterior
     }
 }
