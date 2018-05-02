@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AutoAbrir.iml" filepath="$PROJECT_DIR$/AutoAbrir.iml" />
+      <module fileurl="file://C:\Users\arlen\OneDrive\Documentos\GitHub\PuertaAuto\AutoAbrir\AutoAbrir.iml" filepath="C:\Users\arlen\OneDrive\Documentos\GitHub\PuertaAuto\AutoAbrir\AutoAbrir.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\arlen\OneDrive\Documentos\GitHub\PuertaAuto\AutoAbrir\app\app.iml" filepath="C:\Users\arlen\OneDrive\Documentos\GitHub\PuertaAuto\AutoAbrir\app\app.iml" />
     </modules>
   </component>
 </project>

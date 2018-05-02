@@ -5,10 +5,14 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -21,11 +25,12 @@ import com.android.volley.toolbox.Volley;
 import java.net.URL;
 
 public class Principal extends AppCompatActivity {
-ImageButton abrir;
+    ImageButton abrir;
     RadioButton MLibre;
     RadioButton MSeguro;
     Button salir;
     Boolean puerta;
+    TextView tv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +51,9 @@ ImageButton abrir;
             startActivity(login);
         }
 
-
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        tv=(TextView) findViewById(R.id.textView);
+        setSupportActionBar(toolbar);
 
 
         abrir.setOnClickListener(new View.OnClickListener() {
@@ -74,6 +81,7 @@ ImageButton abrir;
 
             }
         });
+
     }
     public void enviar_recibe(){
         String URL;
@@ -103,5 +111,39 @@ ImageButton abrir;
             }
         });
         res.add(respuesta);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        MenuItem item1= menu.add(0,1,1,"Cambiar Password");
+        MenuItem item2= menu.add(0,2,2,"Opción 2");
+        MenuItem item3= menu.add(0,3,3,"Opción 3");
+
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        switch(id){
+            case 1:
+                Intent loginpass = new Intent(Principal.this,PassActivity.class);
+                startActivity(loginpass);
+                break;
+            default:
+                tv.append("\n Ha pulsado la opción "+id);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
