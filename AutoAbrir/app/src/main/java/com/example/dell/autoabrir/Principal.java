@@ -131,8 +131,7 @@ public class Principal extends AppCompatActivity {
         iniciar = (Button) dialogo.findViewById(R.id.btniniciar);
         contraseña = (EditText) dialogo.findViewById(R.id.etcontralogin);
         iniciar.setOnClickListener(new AcepListener());
-        dialogo.setCancelable(false);
-        dialogo.setCanceledOnTouchOutside(false);
+        dialogo.setCanceledOnTouchOutside(true);
         return dialogo;
     }
     class AcepListener implements View.OnClickListener {
